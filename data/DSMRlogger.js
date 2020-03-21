@@ -187,7 +187,7 @@
         document.body.innerHTML = text;
       })
       .catch(function(error) {
-        console.log(error);
+        console.log("readPageBody: "+error);
       });     
 
   } // readPageBody()
