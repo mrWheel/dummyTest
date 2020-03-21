@@ -184,7 +184,7 @@
         }
       })
       .then(text => {
-        var body = document.body.appendChild(text);
+        document.body.innerHTML = text + document.body.innerHTML;
       })
       .catch(function(error) {
         console.log("readPageBody: "+error);
