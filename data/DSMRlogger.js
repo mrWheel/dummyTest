@@ -184,7 +184,7 @@
         }
       })
       .then(text => {
-        var span = document.getElementById("mainPage");
+        var span = document.getElementById("pageEDGE");
         span.appendChild(text);
       })
       .catch(function(error) {
