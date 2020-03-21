@@ -115,7 +115,10 @@
                     ,"\0"
                    ];
   
-  window.onload=bootsTrapMain;
+  window.onload= function() {
+    readPageBody();
+    bootsTrapMain;
+  }
   window.onfocus = function() {
     if (needBootsTrapMain) {
       window.location.reload(true);
@@ -170,7 +173,6 @@
   //============================================================================  
   function readPageBody()
   {
-    if (GitHubVersion != "-") return;
     
     fetch("https://cdn.jsdelivr.net/gh/mrWheel/dummyTest@master/data/DSMRpage.html")
       .then(response => {
