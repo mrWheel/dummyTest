@@ -184,9 +184,7 @@
         }
       })
       .then(text => {
-        //document.getElementById("pageEDGE").innerHTML = text;
-        var body = document.body.firstChild;
-        body.parentNode.insertafter(text, body);
+        var body = document.body.appendChild(text);
       })
       .catch(function(error) {
         console.log("readPageBody: "+error);
