@@ -116,7 +116,7 @@
                    ];
   
   window.onload= function() {
-    readPageBody();
+    //readPageBody();
     bootsTrapMain;
   }
   window.onfocus = function() {
