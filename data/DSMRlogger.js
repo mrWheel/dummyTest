@@ -184,8 +184,7 @@
         }
       })
       .then(text => {
-        var span = document.getElementById("pageEDGE");
-        span.appendChild(text);
+        document.getElementById("pageEDGE").innerHTML = text;
       })
       .catch(function(error) {
         console.log("readPageBody: "+error);
