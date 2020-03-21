@@ -184,7 +184,8 @@
         }
       })
       .then(text => {
-        document.body.innerHTML = text;
+        var span = document.getElementById("mainPage");
+        span.appendChild(text);
       })
       .catch(function(error) {
         console.log("readPageBody: "+error);
