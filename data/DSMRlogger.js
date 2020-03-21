@@ -166,6 +166,30 @@
       
   } // bootsTrapMain()
   
+  
+  //============================================================================  
+  function readPageBody()
+  {
+    if (GitHubVersion != "-") return;
+    
+    fetch("https://cdn.jsdelivr.net/gh/mrWheel/dummyTest@master/data/DSMRpage.html")
+      .then(response => {
+        if (response.ok) {
+          return response.text();
+        } else {
+          console.log('Something went wrong');
+          return "";
+        }
+      })
+      .then(text => {
+        document.body.innerHTML = text;
+      })
+      .catch(function(error) {
+        console.log(error);
+      });     
+
+  } // readPageBody()
+
     
   function bootsTrapSettings() {
     console.log("bootsTrapSettings()");
