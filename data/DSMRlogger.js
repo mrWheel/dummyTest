@@ -169,30 +169,7 @@
       
   } // bootsTrapMain()
   
-  
-  //============================================================================  
-  function readPageBody()
-  {
-    
-    fetch("https://cdn.jsdelivr.net/gh/mrWheel/dummyTest@master/data/DSMRpage.html")
-      .then(response => {
-        if (response.ok) {
-          return response.text();
-        } else {
-          console.log('Something went wrong');
-          return "";
-        }
-      })
-      .then(text => {
-        document.body.innerHTML = text + document.body.innerHTML;
-      })
-      .catch(function(error) {
-        console.log("readPageBody: "+error);
-      });     
-
-  } // readPageBody()
-
-    
+      
   function bootsTrapSettings() {
     console.log("bootsTrapSettings()");
     needBootsTrapSettings = false;
